@@ -10,6 +10,21 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			let maxE=-1e9
+			let sMaxE=-1e9
+
+			arr.forEach((num)=>{
+				if(num>maxE){
+					sMaxE=maxE;
+					maxE=num;
+				}else if(num!=maxE && num>sMaxE){
+					sMaxE=num;
+				}
+			})
+
+			if(sMaxE==-1e9) return -Infinity;
+
+			return sMaxE;  
 			
 		}
 
